@@ -1,1 +1,32 @@
+# Question 1
+SELECT 
+AVG(alt) 
+FROM airports 
+WHERE faa IN ('EWR','LGA','JFK');
+
 # Question 2
+SELECT tz, 
+AVG(alt) 
+FROM airports
+GROUP BY tz
+ORDER BY tz;
+
+# Question 3
+SELECT tailnum, 
+COUNT(*)
+FROM flights 
+WHERE tailnum IN ('N125UW','N848MQ','N328AA','N247JB')
+GROUP BY tailnum
+ORDER BY COUNT(*) DESC;
+
+# Question 4
+SELECT * 
+FROM planes
+WHERE tailnum IN ('N125UW','N848MQ','N328AA','N247JB');
+
+# Question 5
+SELECT tailnum, year, month, day, dep_delay, arr_delay, dest
+FROM flights 
+WHERE year = 2013 AND month = 2 AND day BETWEEN 14 AND 17 AND
+      tailnum IN ('N125UW','N848MQ','N328AA','N247JB')
+ORDER BY tailnum;
