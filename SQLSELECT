@@ -1,0 +1,71 @@
+# Question 1
+SELECT *
+FROM planes;
+
+# Question 2
+SELECT
+CONCAT(Month,'/',Day,'/',Year) AS Date
+FROM weather;
+
+# Question 3
+SELECT *
+FROM planes
+ORDER BY seats DESC;
+
+# Question 4
+SELECT *
+FROM planes
+WHERE engine = 'Reciprocating';
+
+# Question 5
+SELECT *
+FROM flights
+LIMIT 5;
+
+# Question 6
+SELECT air_time
+FROM flights
+WHERE air_time > 0
+ORDER BY air_time DESC
+LIMIT 1;
+
+# Question 7
+SELECT air_time
+FROM flights
+WHERE air_time > 0 AND carrier = 'DL'
+ORDER BY air_time
+LIMIT 1;
+
+# Question 8
+SELECT *
+FROM flights
+WHERE carrier = 'AS' AND year = 2013 AND month = 6 AND day BETWEEN 1 AND 3;
+# It would not be helpful if we were to select between different years and months.
+# That would require us to write more lines. Instead it would be better to change the date format.
+
+# Question 9
+SELECT *
+FROM airlines
+WHERE name LIKE '%America%';
+
+# Question 10
+SELECT
+COUNT(*)
+FROM flights
+WHERE dest = 'MIA';
+
+# Question 11
+SELECT
+COUNT(*)
+FROM flights
+WHERE dest = 'MIA' AND year = 2013 AND month = 1;
+
+SELECT
+COUNT(*)
+FROM flights
+WHERE dest = 'MIA' AND year = 2013 AND month = 7;
+
+# Question 12
+SELECT
+AVG(alt) AS 'Average Altitude'
+FROM airports;
