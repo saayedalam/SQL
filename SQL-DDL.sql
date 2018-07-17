@@ -1,7 +1,7 @@
 /*
 Saayed Alam
 Data Science Bridge Workshop
-Week 2 Assignment
+Week 2 Handon Lab
 */ 
 
 DROP TABLE IF EXISTS tblGroceryList;
