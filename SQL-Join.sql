@@ -1,7 +1,7 @@
 /*
 Saayed Alam
 Data Science Bridge Workshop
-Week 2 Assignment
+Week 2 Handon Lab
 */ 
 
 #1 Write a SELECT statement that shows for all of the flights during the period February 14th to February 17th for each of the four planes above: ‘N125UW’,’N848MQ’,’N328AA’,’N247JB’. Your select statement should return the following information: tailnum, flight date information, departure delay, arrival delay, 3 digit, destination code.
